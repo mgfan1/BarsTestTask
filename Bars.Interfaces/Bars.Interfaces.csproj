@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreWCF.ConfigurationManager" Version="1.0.2" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bars.Entities\Bars.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
