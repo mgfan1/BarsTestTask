@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Mvvm" Version="21.2.8" />
+    <PackageReference Include="DevExpress.Wpf" Version="21.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bars.Business\Bars.Business.csproj" />
+    <ProjectReference Include="..\Bars.Entities\Bars.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

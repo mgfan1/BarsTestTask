@@ -1,0 +1,34 @@
+﻿<dx:ThemedWindow x:Class="Bars.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                 xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+                 xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                 mc:Ignorable="d"
+                 Title="Bars test task window" Height="315" Width="638" AllowDrop="False">
+    <Grid>
+        <dxg:GridControl ItemsSource="{Binding Contracts}" Margin="0,23,0,0">
+            <dxg:GridColumn FieldName="Number" Header="Contract Number" Width = "125" IsSmart="True" AllowSorting="true" ReadOnly = "True">
+                <dxg:GridColumn.EditSettings>
+                    <dxe:TextEditSettings MaskType="Numeric" MaskUseAsDisplayFormat="True"/>
+                </dxg:GridColumn.EditSettings>
+            </dxg:GridColumn>
+            <dxg:GridColumn FieldName="Date" Header="Contract Date" Width = "125" IsSmart="True" AllowSorting="true" SortOrder="Descending" SortIndex="0" ReadOnly = "True">
+                <dxg:GridColumn.EditSettings>
+                    <dxe:TextEditSettings MaskType="DateTime" MaskUseAsDisplayFormat="True"/>
+                </dxg:GridColumn.EditSettings>
+            </dxg:GridColumn>
+            <dxg:GridColumn FieldName="LastModifiedDate" Header="LastModifiedDate" Width = "125"  IsSmart="True" AllowSorting="true" SortOrder="Ascending" SortIndex="1" ReadOnly = "True">
+                <dxg:GridColumn.EditSettings>
+                    <dxe:TextEditSettings MaskType="DateTime" MaskUseAsDisplayFormat="True"/>
+                </dxg:GridColumn.EditSettings>
+            </dxg:GridColumn>
+            <dxg:GridColumn FieldName="IsActual" Header="Is Actual" Width = "125" IsSmart="True" AllowSorting="true" SortOrder="Descending" SortIndex="1" ReadOnly = "True"></dxg:GridColumn>
+        </dxg:GridControl>
+        <StackPanel Orientation="Vertical">
+            <Button Content="Refresh" Margin="0,0,0,276" Command="{Binding Refresh}" Height="23"/>
+        </StackPanel>
+    </Grid>
+</dx:ThemedWindow>
