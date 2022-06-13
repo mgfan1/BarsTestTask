@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bars.Entities\Bars.Entities.csproj" />
+    <ProjectReference Include="..\Bars.Infrasctucture\Bars.Infrasctucture.csproj" />
+  </ItemGroup>
+
+</Project>
