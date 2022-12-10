@@ -27,10 +27,6 @@ namespace Bars.Data.DAComponents
             return new Procedure(ConnectionContainer.Connection, ConnectionContainer.CurrentTransaction, name);
         }
 
-        protected virtual Procedure CreateDefaultProcedure(string name)
-        {
-            return new Procedure(name);
-        }
 
         protected T ReadStruct<T>(IDataRecord record, string columnName) where T : struct
         {
